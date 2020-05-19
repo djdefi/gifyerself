@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# app.rb
+#!/usr/bin/env ruby
 require 'sinatra'
 
 dirname = __dir__
