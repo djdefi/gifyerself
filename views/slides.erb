@@ -1,6 +1,19 @@
-<% files.each do |file| %>
-   <img class="mySlides" src="<%= path + '/' + file %>">
-<%end %>
+<style type="text/css">
+  .center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+</style> 
+
+<div class="center-screen">
+  <% files.each do |file| %>
+    <img class="mySlides" src="<%= path + '/' + file %>">
+  <%end %>
+</div>
 
 <script>
 var slideIndex = 0;

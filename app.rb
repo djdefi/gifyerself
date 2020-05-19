@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 require 'sinatra'
+set :bind, '0.0.0.0'
 
 dirname = __dir__
 
@@ -18,5 +19,5 @@ get '/*' do
   puts dirname
   puts request.path_info
   puts path
-  erb :slides, locals: { files: file_names(path), path: request.path_info }
+  erb :slides, locals: { files: file_names(path).shuffle, path: request.path_info }
 end
