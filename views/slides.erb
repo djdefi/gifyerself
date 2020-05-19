@@ -19,6 +19,11 @@
 var slideIndex = 0;
 carousel();
 
+// Function to generate random number  
+function randomNumber(min, max) {  
+    return Math.random() * (max - min) + min; 
+} 
+
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -28,6 +33,6 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 15000); // Change image every 15 seconds
+  setTimeout(carousel, randomNumber(5000, 15000));
 }
 </script>
