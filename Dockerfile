@@ -1,5 +1,5 @@
 FROM ruby:2.7-alpine
-
+EXPOSE 4567
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
@@ -10,4 +10,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["./app.rb"]
+CMD ["ruby", "app.rb"]
