@@ -1,4 +1,4 @@
-FROM ruby:3.0-alpine
+FROM ruby:3.1-alpine
 EXPOSE 4567
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
